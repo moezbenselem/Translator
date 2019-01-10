@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="2dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="moezbenselem.translator.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:animateLayoutChanges="true"
+    >
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spIn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_weight="1" />
+
+        <Button
+            android:id="@+id/btdetect"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/search1"
+            android:text="" />
+
+
+        <Spinner
+            android:id="@+id/spOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1" />
+    </LinearLayout>
+
+    <include layout="@layout/card_input" />
+    <include layout="@layout/card_output"/>
+
+
+    </LinearLayout>
+
+    <com.google.android.gms.ads.AdView
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/adView"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_centerHorizontal="true"
+    android:layout_alignParentBottom="true"
+    ads:adSize="BANNER"
+    android:layout_marginBottom="20dp"
+    ads:adUnitId="ca-app-pub-7087198421941611/1716991025">
+    </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
